@@ -56,7 +56,7 @@ def new_search(request):
         today_image = soup.find('img', {'class': 'img-responsive center-block'}).get('src')
         details = soup.find('div', {'class': 'p-2 text-center'}).text
 
-        today = ('Today', today_image, today_max, today_min, details)
+        today = ('Hoje', today_image, today_max, today_min, details)
 
         next_days = all_weather.find_all('div', {'class': 'col-md-2 text-center align-middle boletins'})
         days = []
