@@ -47,25 +47,34 @@ def new_search(request):
         soup = BeautifulSoup(data, features="html.parser")
 
         all_weather = soup.find('div', {'class': 'col-md-12'})
-        today = all_weather.find_all('div', {'class': 'col-md-2 temperaturas align-middle'})
-        next_days = all_weather.find_all('div', {'class': 'col-md-2 text-center align-middle boletins'})
 
+        city = all_weather.find('h2', {'class': 'text-center'})
+
+        today_temp = all_weather.find_all('div', {'class': 'col-md-2 temperaturas align-middle'})
+        today_max = today_temp[0].find('div', {'class': 'row justify-content-md-center align-bottom h3'}).text
+        today_min = today_temp[0].find('div', {'class': 'row justify-content-md-center align-top h3'}).text
+        today_image = soup.find('img', {'class': 'img-responsive center-block'}).get('src')
+        details = soup.find('div', {'class': 'p-2 text-center'}).text
+
+        today = ('Today', today_image, today_max, today_min, details)
+
+        next_days = all_weather.find_all('div', {'class': 'col-md-2 text-center align-middle boletins'})
         days = []
 
         for day in next_days:
             week_day = day.find('h5').text
             week_day = week_day[:-5] + " " + week_day[-5:]
-            image = day.find('img')
+            image = day.find('img').get('src')
             min_temp = day.find('span', {'class': 'text-primary text-left font-weight-bold pull-left h5'}).text
             max_temp = day.find('span', {'class': 'text-danger text-right font-weight-bold pull-right h5'}).text
-            item = (week_day, image, max_temp, min_temp)
+            details = day.find('figcaption', {'class': 'align-bottom'}).text
+            item = (week_day, image, max_temp, min_temp, details)
             days.append(item)
-            print()
-            print(item)
-            print()
 
         data_for_frontend = {
-            'days': days
+            'today': today,
+            'days': days,
+            'city': city,
         }
 
         return render(request, 'my_app/index.html', data_for_frontend)
