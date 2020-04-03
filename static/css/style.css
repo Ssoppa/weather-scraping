@@ -24,3 +24,12 @@ body {
 .image-card {
   padding-bottom: 1rem;
 }
+
+.idea-question, .idea-answer {
+  line-height: 2;
+  font-size: 18px;
+}
+
+.card-image-container {
+  min-height: 60%; /* Provavelmente irá mudar no iPad*/
+}
