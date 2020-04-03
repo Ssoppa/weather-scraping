@@ -1,5 +1,55 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<h2>Contact Page</h2>
+    <div class="row">
+        <div class="col s12 l6 left" style="margin-top: 15vh">
+            <img class="responsive-img" src="{% static 'images/undraw_contact_us_15o2.svg' %}" alt="">
+        </div>
+        <div class="col s12 l6 right" style="margin-top: 5vh">
+            <form>
+                <h3>Wanna email me?</h3>
+                <div class="row">
+                    <div class="input-field col s12 l6">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s12 l6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="subject" type="text" class="validate">
+                        <label for="subject">Subject</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="message" class="materialize-textarea"></textarea>
+                        <label for="message">Message</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s3 m3">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Send
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <h3>Other ways to contact me?</h3>
+        <p>Nope (just kidding, I will add later)</p>
+    </div>
+
 {% endblock content %}
