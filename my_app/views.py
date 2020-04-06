@@ -9,6 +9,8 @@ BASE_WEATHER_URL = 'https://www.cptec.inpe.br/previsao-tempo/{}/{}'
 states = ['ac', 'al', 'ap', 'am', 'ba', 'ce', 'df', 'es', 'go',
           'ma', 'mt', 'ms', 'mg', 'pa', 'pb', 'pr', 'pe', 'pi',
           'rr', 'ro', 'rj', 'rn', 'rs', 'sc', 'sp', 'se', 'to']
+# Next step is to build a database with cities and states, to check if the input is correct
+# After that, upgrade to search in other sites, world-wide
 
 
 # Create your views here.

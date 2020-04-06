@@ -1,18 +1,26 @@
 html, body {
   height: 100%;
 }
+
 body {
   display: flex;
   flex-direction: column;
 }
+
 .content {
   flex: 1 0 auto;
 }
+
 .footer {
   flex-shrink: 0;
 }
+
+.page-footer {
+    margin-top: 10vh;
+}
+
 .carousel {
-  min-height: 500px;
+  height: 1000px;
   margin-bottom: 10vh;
 }
 
