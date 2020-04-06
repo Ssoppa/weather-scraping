@@ -7,7 +7,7 @@ from <a href="https://www.cptec.inpe.br/">Centro de Previsão de Tempo e Estudos
 the meaningful information and display it in a beautiful way.
 
 * **Materialize** and **BeautifulSoup4**.
-* As fast as your blink.
+* As fast as an eye's blink.
 
 ## How It Works
 
@@ -21,7 +21,7 @@ the meaningful information and display it in a beautiful way.
 ## How To Use
 
 If you don't want to download and install the requirements, there is a online version 
-<a href="#">here</a>.
+<a href="https://weather-scrape.herokuapp.com/">here</a>.
 
 <details><summary><b>Show instructions</b></summary>
 

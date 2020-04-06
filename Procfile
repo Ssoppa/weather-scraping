@@ -1,1 +1,1 @@
-web: gunicorn scrappingweatherblablabla.wsgi
+web: gunicorn weather-scrape.wsgi
