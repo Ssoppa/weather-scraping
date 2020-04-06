@@ -2,6 +2,8 @@ from django.shortcuts import render
 from bs4 import BeautifulSoup
 import requests
 import unicodedata
+from django.core.mail import send_mail
+from django.http import HttpResponse
 
 BASE_WEATHER_URL = 'https://www.cptec.inpe.br/previsao-tempo/{}/{}'
 states = ['ac', 'al', 'ap', 'am', 'ba', 'ce', 'df', 'es', 'go',
@@ -20,6 +22,19 @@ def contact(request):
 
 def about(request):
     return render(request, 'my_app/about.html')
+
+
+def email(request):
+    first_name = request.POST.get('first_name')
+    last_name = request.POST.get('last_name')
+    email = request.POST.get('email')
+    subject = request.POST.get('subject')
+    message = request.POST.get('message')
+    formated_message = "User: {0} {1}\n\nEmail: {2}\n\nMessage: \n{3}".format(
+        first_name, last_name, email, message
+    )
+    send_mail(subject, formated_message, email, ['suppersoppa@gmail.com'])
+    return HttpResponse(200)
 
 
 def new_search(request):
@@ -48,7 +63,7 @@ def new_search(request):
 
         all_weather = soup.find('div', {'class': 'col-md-12'})
 
-        city = all_weather.find('h2', {'class': 'text-center'})
+        city = all_weather.find('h2', {'class': 'text-center'}).text
 
         today_temp = all_weather.find_all('div', {'class': 'col-md-2 temperaturas align-middle'})
         today_max = today_temp[0].find('div', {'class': 'row justify-content-md-center align-bottom h3'}).text

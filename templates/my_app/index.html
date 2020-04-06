@@ -23,7 +23,7 @@
             <!-- Promo Content 3 goes here -->
             <div class="center">
                 <i class="large material-icons" style="color: blue">chrome_reader_mode</i>
-                <p>A much sexier front-end to the other sites</p>
+                <p>A minimalist experience</p>
                 <p class="light center">We built this with <i class="tiny material-icons" style="color: red">favorite</i></p>
             </div>
         </div>
@@ -51,34 +51,35 @@
         </div>
     </div>
     {% if today %}
-    <div class="carousel">
-        <div class="row">
-            <div class="col s8 m5 l3 carousel-item">
-                <div class="card red darken-2">
-                    <div class="card-content white-text">
-                        <span class="card-title center-align">{{ today.0 }}</span>
-                        <p class="center-align image-card"><img src="{{ today.1 }}" alt=""></p>
-                        <p class="card-text"><b>Min. temp:</b> {{ today.3 }}</p>
-                        <p class="card-text"><b>Max. temp:</b> {{ today.2 }}</p>
-                        <p class="card-text">{{ today.4 }}</p>
+        <h2 class="center-align">{{ city }}</h2>
+        <div class="carousel">
+            <div class="row">
+                <div class="col s8 m5 l3 carousel-item">
+                    <div class="card red darken-2">
+                        <div class="card-content white-text">
+                            <span class="card-title center-align">{{ today.0 }}</span>
+                            <p class="center-align image-card"><img src="{{ today.1 }}" alt=""></p>
+                            <p class="card-text"><b>Min. temp:</b> {{ today.3 }}</p>
+                            <p class="card-text"><b>Max. temp:</b> {{ today.2 }}</p>
+                            <p class="card-text">{{ today.4 }}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-            {% for day in days %}
-            <div class="col s8 m5 l3 carousel-item">
-                <div class="card red darken-2">
-                    <div class="card-content white-text">
-                        <span class="card-title center-align">{{ day.0 }}</span>
-                        <p class="center-align image-card"><img src="{{ day.1 }}" alt=""></p>
-                        <p class="card-text"><b>Min. temp:</b> {{ day.3 }}</p>
-                        <p class="card-text"><b>Max. temp:</b> {{ day.2 }}</p>
-                        <p class="card-text">{{ day.4 }}</p>
+                {% for day in days %}
+                    <div class="col s8 m5 l3 carousel-item">
+                        <div class="card red darken-2">
+                            <div class="card-content white-text">
+                                <span class="card-title center-align">{{ day.0 }}</span>
+                                <p class="center-align image-card"><img src="{{ day.1 }}" alt=""></p>
+                                <p class="card-text"><b>Min. temp:</b> {{ day.3 }}</p>
+                                <p class="card-text"><b>Max. temp:</b> {{ day.2 }}</p>
+                                <p class="card-text">{{ day.4 }}</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                {% endfor %}
             </div>
-            {% endfor %}
         </div>
-    </div>
     {% endif %}
 
 
