@@ -1,5 +1,6 @@
 # Weather Scraping
 
+**Home Page:**
 <p style="text-align: center">
     <img src="./static/images/home.png"
       alt="Weather Scraping Home Page, with three cards about the features 
@@ -7,18 +8,21 @@
       width="960" height="478">
 </p>
 
+**Weather Results:**
 <p style="align-self: center">
     <img src="./static/images/weather.png"
       alt="Weather search result for Joinville/SC."
       width="960" height="478">
 </p>
 
+**About the idea:**
 <p style="align-self: center">
     <img src="./static/images/about_idea.png"
       alt="Idea for this project: Show just the necessary information."
       width="960" height="480">
 </p>
 
+**About the development:**
 <p style="align-self: center">
     <img src="./static/images/about_cards.png"
       alt="Three cards: Inspiration, facilitate my life; Creative Research, learn what people need to know; 
@@ -26,6 +30,7 @@
       width="960" height="478">
 </p>
 
+**Contact Page:**
 <p style="align-self: center">
     <img src="./static/images/contact.png"
       alt="Contact Page with send email option."
