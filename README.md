@@ -1,29 +1,35 @@
 # Weather Scraping
 
 <p style="text-align: center">
-<img src="./static/images/home.png"
-  alt="Weather Scraping Home Page, with three cards about the features 
-  and the banner: 'What's the weather look like today?'"
-  width="480" height="239">
-<img src="./static/images/weather.png"
-  alt="Weather search result for Joinville/SC."
-  width="480" height="239">
+    <img src="./static/images/home.png"
+      alt="Weather Scraping Home Page, with three cards about the features 
+      and the banner: 'What's the weather look like today?'"
+      width="960" height="478">
 </p>
 
 <p style="align-self: center">
-<img src="./static/images/about_idea.png"
-  alt="Idea for this project: Show just the necessary information."
-  width="960" height="480">
+    <img src="./static/images/weather.png"
+      alt="Weather search result for Joinville/SC."
+      width="960" height="478">
 </p>
 
 <p style="align-self: center">
-<img src="./static/images/about_cards.png"
-  alt="Three cards: Inspiration, facilitate my life; Creative Research, learn what people need to know; 
-  Development, learn Web Scraping, BeautifulSoup4 and Materialize."
-  width="480" height="239">
-<img src="./static/images/contact.png"
-  alt="Contact Page with send email option."
-  width="480" height="239">
+    <img src="./static/images/about_idea.png"
+      alt="Idea for this project: Show just the necessary information."
+      width="960" height="480">
+</p>
+
+<p style="align-self: center">
+    <img src="./static/images/about_cards.png"
+      alt="Three cards: Inspiration, facilitate my life; Creative Research, learn what people need to know; 
+      Development, learn Web Scraping, BeautifulSoup4 and Materialize."
+      width="960" height="478">
+</p>
+
+<p style="align-self: center">
+    <img src="./static/images/contact.png"
+      alt="Contact Page with send email option."
+      width="960" height="478">
 </p>
 
 This project was made to learn how web scraping works. Basically, it takes data
